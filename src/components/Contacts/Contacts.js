@@ -1,5 +1,6 @@
 import React from 'react';
-import ContactsItem from '../ContactsItem/ContactsItem'
+import ContactsItem from '../ContactsItem/ContactsItem';
+import PropTypes from 'prop-types'
 
 function Contacts ({contacts,onRemoveContact}){
     return(
@@ -17,5 +18,14 @@ function Contacts ({contacts,onRemoveContact}){
         </div>
     )
 }
-
+Contacts.propTypes={
+    id:PropTypes.string,
+    name:PropTypes.string,
+    number:PropTypes.string,
+}
+Contacts.defaultProps = {
+    id: '',
+    name: '',
+    number: '',
+}
 export default Contacts;
